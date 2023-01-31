@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
-import { BsFillSunFill, BsFillMoonFill } from "react-icons/all";
+import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
 
 {/* This switch is built using HeadlessUI's switch module. */}
 
@@ -31,9 +31,9 @@ function DarkModeSwitch() {
       <span className={`${ isDarkMode ? 'translate-x-6' : 'translate-x-1'}
         inline-block h-4 w-4 transform rounded-full bg-white transition`} />
       {/* Have the sun show on the left side of the switch and the moon show on the right side of the switch. When dark mode is on the sun should show. */}
-      <BsFillMoonFill className={`${ isDarkMode ? 'hidden' : 'inline-block'}
+      <MoonIcon className={`${ isDarkMode ? 'hidden' : 'inline-block'}
         absolute h-3.5 w-3.5 text-gray-300 right-1`} />
-      <BsFillSunFill className={`${ isDarkMode ? 'inline-block' : 'hidden'}
+      <SunIcon className={`${ isDarkMode ? 'inline-block' : 'hidden'}
         absolute h-3.5 text-yellow-300 left-1`} />
     </Switch>
   );

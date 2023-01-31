@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/all";
-import { RxDotFilled } from "react-icons/all";
+import { ChevronLeftIcon, ChevronRightIcon, MinusIcon } from "@heroicons/react/24/solid";
 
 export default function ImagePortfolio() {
 
@@ -38,17 +37,17 @@ export default function ImagePortfolio() {
 			<div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className={"w-full h-full rounded-2xl bg-center bg-cover duration-500"}></div>
 			{/* Left arrow */}
 			<div className={"hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"}>
-				<BsChevronCompactLeft onClick={prevSlide} size={30}/>
+				<ChevronLeftIcon onClick={prevSlide} className={"h-5 w-5"}/>
 			</div>
 			{/* Right arrow */}
 			<div className={"hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"}>
-				<BsChevronCompactRight onClick={nextSlide} size={30} />
+				<ChevronRightIcon onClick={nextSlide} className={"h-5 w-5"}/>
 			</div>
 
 			{/* Dots */}
 			<div className={"absolute bottom-5 left-[50%] -translate-x-1/2 flex gap-2"}>
 				{slides.map((slide, index) => (
-					<RxDotFilled key={index}  size={20} className={ index === currentIndex ? "text-black dark:text-white" : "text-gray-400"} />
+					<MinusIcon key={index} className={ index === currentIndex ? "text-black dark:text-white h-5 w-5" : "text-gray-400 h-5 w-5"} />
 				))}
 			</div>
 		</div>
