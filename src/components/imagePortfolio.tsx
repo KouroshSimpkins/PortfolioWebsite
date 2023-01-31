@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/Bs";
-import { RxDotFilled } from "react-icons/Rx";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/all";
+import { RxDotFilled } from "react-icons/all";
 
 export default function ImagePortfolio() {
 
