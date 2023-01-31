@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
-import { BsFillSunFill, BsFillMoonFill } from "react-icons/Bs";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/all";
 
 {/* This switch is built using HeadlessUI's switch module. */}
 
